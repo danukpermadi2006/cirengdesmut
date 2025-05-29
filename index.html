@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cireng Renyah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <ul>
+      <li><a href="#">CirengKuy</a></li>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#pesan">Pesan</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="beranda" class="fade-in">
+    <h1>Cireng Renyah</h1>
+    <p>Gurih, renyah, dan bikin nagih!</p>
+    <img src="cireng.jpg" alt="Cireng Renyah" class="gambar-cireng" />
+  </header>
+
+  <!-- Konten Utama -->
+  <main>
+    <!-- Tentang Cireng -->
+    <section id="tentang" class="fade-in">
+      <p class="deskripsi">
+        Nikmati sensasi unik cireng isi ayam suwir pedas dan lelehan keju yang lumer di mulut! Dibuat dari bahan berkualitas, renyah di luar, lembut dan gurih di dalam.
+        <br><br/>
+Pesan sekarang, dan rasakan kenikmatannya di setiap gigitan! 🛒🔥
+      </p>
+    </section>
+
+    <!-- Form Pemesanan -->
+    <section id="pesan" class="fade-in">
+      <form onsubmit="kirimPesanan(event)">
+        <input type="text" id="nama" placeholder="Nama Anda" required />
+        <input type="number" id="jumlah" placeholder="Jumlah Pesanan (maks 100)" min="1" max="100" required />
+        <select id="rasa" required>
+          <option value="">Pilih Rasa</option>
+          <option value="Ayam Suwir">Ayam Suwir</option>
+          <option value="Keju">Keju</option>
+        </select>
+        <p id="total-harga">Total: Rp0</p>
+        <button type="submit" id="tombol-submit">Kirim Pesanan</button>
+        <div id="notifikasi"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

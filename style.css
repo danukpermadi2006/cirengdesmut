@@ -1,0 +1,180 @@
+/* Reset dan dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f97316;
+  color: #333;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background-color: #f97316;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav li a:hover {
+  color: #fffacd;
+}
+
+/* Header */
+header {
+  background-color: #f97316;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Gambar cireng */
+.gambar-cireng {
+  width: 300px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Deskripsi */
+.deskripsi {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+  color: #fff8dc;
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px #000000a0;
+  transition: transform 0.3s ease;
+}
+
+.deskripsi:hover {
+  transform: scale(1.05);
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form */
+form {
+  margin: 30px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+form input:focus,
+form select:focus {
+  box-shadow: 0 0 5px 2px #16a34a;
+}
+
+#total-harga {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 15px 0;
+  color: white;
+  text-align: center;
+}
+
+/* Tombol */
+button {
+  width: 100%;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+button:hover {
+  background-color: #15803d;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Notifikasi */
+#notifikasi {
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .gambar-cireng {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* Fade in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
